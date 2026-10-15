@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Mojo Batey's software engineering experience at Veeva Systems and AS Graphic Studio.">
+  <title>Experience | Mojo Batey</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html" aria-current="page">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Experience</h1>
+
+    <p>
+      My experience includes working on the Core Documents team
+      at Veeva Systems and creating websites for the UC San Diego
+      events and organizations at AS Graphic Studio.
+    </p>
+
+    <section>
+      <h2>Veeva Systems</h2>
+      <p>
+        <strong>Software Engineer Intern</strong>
+        — Core Documents Team
+      </p>
+      <p>June–September 2026 · Pleasanton, California</p>
+
+      <h3>Overview</h3>
+      <p>
+        I worked on the Core Documents team on the Vault
+        platform, contributing to document functionality and
+        internal tools used by developers.
+      </p>
+
+      <h3>Contributions</h3>
+      <ul>
+        <li>
+          Built a dedicated React page for Core Documents
+          actions in the internal administration console.
+        </li>
+        <li>
+          Migrated more than 20 internal administration actions
+          from JavaScript and REST to TypeScript and GraphQL.
+        </li>
+        <li>
+          Developed reusable queries to simplify recurring
+          document investigations.
+        </li>
+        <li>
+          Moved the document reclassify action from the viewer
+          panel to the main action list and implemented backend
+          permission and validation checks.
+        </li>
+      </ul>
+
+      <h3>Technical Challenge: Reclassify Permissions</h3>
+      <p>
+        The reclassify action needed to determine which document
+        types a user could select. This involved traversing the
+        document type hierarchy and checking access permissions.
+      </p>
+      <p>
+        I reduced unnecessary database calls, used cached document
+        type information, and introduced a bulk permission-checking
+        call. These changes reduced the action permission API
+        latency from approximately 14 seconds to 11 seconds.
+      </p>
+
+      <h3>Lessons Learned</h3>
+      <p>
+        This experience taught me to consider how a feature fits
+        into the broader application. Discussions with other teams
+        revealed edge cases that affected the implementation,
+        reinforcing the value of early alignment and allowing
+        enough time for design and security considerations.
+      </p>
+
+      <h3>Technologies</h3>
+      <p>Java, React, TypeScript, GraphQL, and REST APIs.</p>
+    </section>
+
+    <section>
+      <h2>AS Graphic Studio</h2>
+      <p><strong>Webmaster / Frontend Developer</strong></p>
+      <p>Current role · UC San Diego</p>
+
+      <h3>Overview</h3>
+      <p>
+        I create websites for events organized by Associated
+        Students at UC San Diego. I collaborate with designers
+        to translate their ideas into functional web pages
+        for the university community.
+      </p>
+
+      <h3>Responsibilities</h3>
+      <ul>
+        <li>
+          Develop and maintain websites for Associated Students
+          events and organizations.
+        </li>
+        <li>
+          Collaborate with UI/UX designers to implement
+          page layouts and interface details.
+        </li>
+        <li>
+          Build pages that work across desktop and mobile
+          screen sizes.
+        </li>
+      </ul>
+
+      <h3>Connection to My Interests</h3>
+      <p>
+        This role combines my interest in building useful
+        applications with the opportunity to contribute to
+        campus experiences. Working with designers also gives
+        me practice discussing requirements and making
+        implementation decisions together.
+      </p>
+
+      <h3>Technologies</h3>
+      <p>React, Next.js, TypeScript, and Tailwind CSS.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="contact.html">Contact me</a></p>
+    <p><a href="experiments.html">HTML experiments</a></p>
+    <p><small>&copy; 2026 Mojo Batey</small></p>
+  </footer>
+</body>
+</html>

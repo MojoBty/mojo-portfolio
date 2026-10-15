@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Demonstrations of HTML media, graphics, templates, and custom elements.">
+  <title>Experiments | Mojo Batey</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <style>
+    project-note {
+      display: block;
+      border: 1px solid;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>HTML Experiments</h1>
+    <p>
+      This page demonstrates media, graphics, and other HTML features.
+    </p>
+
+    <section>
+      <h2>Audio Introduction</h2>
+      <p>A short introduction to my portfolio.</p>
+
+      <audio controls preload="none">
+        <source src="assets/introduction.mp3" type="audio/mpeg">
+        Your browser does not support embedded audio.
+      </audio>
+
+      <h3>Transcript</h3>
+      <p>
+        Hi, I'm Mojo, a computer science student at UC San Diego.
+        This portfolio shares my projects, experience, and
+        interests in software engineering.
+      </p>
+    </section>
+
+    <section>
+      <h2>Video Introduction</h2>
+      <p>A short, silent tour of my portfolio homepage.</p>
+
+      <video controls muted preload="none" width="480">
+        <source src="assets/portfolio-tour.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+
+      <p>
+        Video description: The recording shows the homepage
+        introduction, featured projects section, engineering
+        experience section, and navigation links.
+      </p>
+    </section>
+
+    <section>
+      <h2>Canvas Drawing</h2>
+      <p>A simple rectangle drawn using JavaScript.</p>
+
+      <canvas id="drawing" width="300" height="150">
+        A solid rectangle.
+      </canvas>
+
+      <noscript>
+        <p>
+          JavaScript is disabled, so the canvas drawing is unavailable.
+          The demonstration draws a solid rectangle.
+        </p>
+      </noscript>
+    </section>
+
+    <section>
+      <h2>SVG Graphic</h2>
+      <svg xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 200 100" width="200" height="100"
+           role="img" aria-labelledby="svg-title">
+        <title id="svg-title">Two connected application components</title>
+        <rect x="10" y="25" width="60" height="50"
+              fill="none" stroke="black"></rect>
+        <line x1="70" y1="50" x2="130" y2="50"
+              stroke="black"></line>
+        <rect x="130" y="25" width="60" height="50"
+              fill="none" stroke="black"></rect>
+      </svg>
+      <p>
+        The connected boxes represent two components communicating
+        within an application.
+      </p>
+    </section>
+
+    <section>
+      <h2>HTML Template</h2>
+      <p>
+        A project template is stored in the page source.
+        Its contents are not displayed or inserted into the page.
+      </p>
+
+      <template id="project-template">
+        <article>
+          <h3>Project Name</h3>
+          <p>Project description.</p>
+        </article>
+      </template>
+    </section>
+
+    <section>
+      <h2>Static Dialog</h2>
+      <p>
+        This dialog is displayed using the open attribute.
+        It has no scripted interactions.
+      </p>
+
+      <dialog open aria-labelledby="dialog-title">
+        <h3 id="dialog-title">Demonstration Notice</h3>
+        <p>This is a static example of an HTML dialog.</p>
+      </dialog>
+    </section>
+
+    <section>
+      <h2>Custom Elements</h2>
+
+      <h3>Project Note</h3>
+      <project-note>
+        <p>
+          This custom element groups a note about a project.
+          Its element-specific CSS establishes a block and border.
+        </p>
+      </project-note>
+
+      <h3>Console Greeting</h3>
+      <p>
+        The hello-world element prints “Hello World!” to the browser
+        console without changing the page content.
+      </p>
+      <hello-world></hello-world>
+    </section>
+
+    <section>
+        <h2>Embedded Page</h2>
+        <p>A preview of my portfolio homepage.</p>
+        <iframe src="index.html"
+                title="Portfolio homepage preview"
+                width="600"
+                height="400"></iframe>
+      </section>
+      
+      <section>
+        <h2>Progress Indicator</h2>
+        <p>This static example represents a task with three of five steps complete.</p>
+        <label for="sample-progress">Sample task progress:</label>
+        <progress id="sample-progress" value="3" max="5">60%</progress>
+      </section>
+  </main>
+
+  <footer>
+    <p><a href="contact.html">Contact me</a></p>
+    <p>
+      <a href="experiments.html" aria-current="page">HTML experiments</a>
+    </p>
+    <p><small>&copy; 2026 Mojo Batey</small></p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById("drawing");
+    const context = canvas.getContext("2d");
+    context.fillRect(25, 25, 150, 75);
+  </script>
+
+  <script>
+    customElements.define(
+      "hello-world",
+      class extends HTMLElement {
+        connectedCallback() {
+          console.log("Hello World!");
+        }
+      }
+    );
+  </script>
+</body>
+</html>
