@@ -164,6 +164,32 @@
         <label for="sample-progress">Sample task progress:</label>
         <progress id="sample-progress" value="3" max="5">60%</progress>
       </section>
+
+      <section>
+        <h2>MathML: Mass-Energy Equivalence</h2>
+        <p>Einstein's mass-energy equivalence formula:</p>
+      
+        <math display="block">
+          <mi>E</mi>
+          <mo>=</mo>
+          <mi>m</mi>
+          <msup>
+            <mi>c</mi>
+            <mn>2</mn>
+          </msup>
+        </math>
+      
+        <h3>Why MathML Was Hard to Use</h3>
+        <p>
+          MathML has inconsistent browser support for previous versions. For
+          Chrome, versions 25-96 didn't support it at all, with full support
+          coming back since version 109. The same went for Edge, and Internet
+          Explorer never supported MathML. Since Chrome was the most widely 
+          used browser, developers couldn’t rely on MathML and used JavaScript 
+          libraries like MathJax or images of equations instead,
+          until Chromium added support in 2023.
+        </p>
+      </section>
   </main>
 
   <footer>
